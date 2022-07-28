@@ -1,5 +1,5 @@
 import 'package:coffee_app_ui/constants/theme.dart';
-import 'package:coffee_app_ui/screen/home_screen.dart';
+import 'package:coffee_app_ui/screen/mainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +20,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Coffee App UI',
         theme: AppTheme.appTheme,
-        home: const HomeScreen(),
+        home: const MainScreen(),
+        initialRoute: '/', // /home
+        routes: {
+          '/home': (context) => const MainScreen(),
+        },
       ),
     );
   }

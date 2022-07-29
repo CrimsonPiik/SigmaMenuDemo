@@ -38,7 +38,8 @@ class _FooterState extends State<Footer>
             width: double.maxFinite,
             color: Colors.white.withOpacity(0.7),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 100.0, vertical: 20.0),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

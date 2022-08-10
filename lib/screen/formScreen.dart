@@ -35,15 +35,18 @@ class _FormScreenState extends State<FormScreen> {
                 children: [
                   const Text('  Contact information',
                       style: TextStyle(fontSize: 20)),
-                  CommonUI.textField(
-                    context: context,
-                    name: "email",
-                    controller: email,
-                    hint: " Email",
-                    validate: FormBuilderValidators.compose([
-                      FormBuilderValidators.required(),
-                      FormBuilderValidators.email(),
-                    ]),
+                  SizedBox(
+                    width: 400,
+                    child: CommonUI.textField(
+                      context: context,
+                      name: "email",
+                      controller: email,
+                      hint: " Email",
+                      validate: FormBuilderValidators.compose([
+                        FormBuilderValidators.required(),
+                        FormBuilderValidators.email(),
+                      ]),
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
@@ -108,7 +111,7 @@ class _FormScreenState extends State<FormScreen> {
                   //   ),
                   // ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton2(
                         isExpanded: true,
@@ -120,7 +123,7 @@ class _FormScreenState extends State<FormScreen> {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        items: countries
+                        items: country
                             .map((item) => DropdownMenuItem<String>(
                                   value: item,
                                   child: Text(
@@ -149,7 +152,7 @@ class _FormScreenState extends State<FormScreen> {
                         buttonHeight: 50,
                         buttonWidth: 250,
                         buttonPadding:
-                            const EdgeInsets.only(left: 12, right: 12),
+                            const EdgeInsets.only(left: 14, right: 14),
                         buttonDecoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           border:
@@ -172,6 +175,90 @@ class _FormScreenState extends State<FormScreen> {
                         scrollbarAlwaysShow: true,
                         offset: const Offset(-20, 0),
                       ),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 400,
+                        child: CommonUI.textField(
+                          context: context,
+                          name: "email",
+                          controller: email,
+                          hint: "  First name",
+                          validate: FormBuilderValidators.compose([
+                            FormBuilderValidators.required(),
+                          ]),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 400,
+                        child: CommonUI.textField(
+                          context: context,
+                          name: "email",
+                          controller: email,
+                          hint: "  Last name",
+                          validate: FormBuilderValidators.compose([
+                            FormBuilderValidators.required(),
+                          ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // const SizedBox(height: 5),
+                  SizedBox(
+                    width: 400,
+                    child: CommonUI.textField(
+                      context: context,
+                      name: "email",
+                      controller: email,
+                      hint: "  Address",
+                      validate: FormBuilderValidators.compose([
+                        FormBuilderValidators.required(),
+                      ]),
+                    ),
+                  ),
+                  // const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 400,
+                        child: CommonUI.textField(
+                          context: context,
+                          name: "email",
+                          controller: email,
+                          hint: "  City",
+                          validate: FormBuilderValidators.compose([
+                            FormBuilderValidators.required(),
+                          ]),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 400,
+                        child: CommonUI.textField(
+                          context: context,
+                          name: "email",
+                          controller: email,
+                          hint: "  Postal Code",
+                          validate: FormBuilderValidators.compose([
+                            FormBuilderValidators.required(),
+                          ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // const SizedBox(height: 5),
+                  SizedBox(
+                    width: 400,
+                    child: CommonUI.textField(
+                      context: context,
+                      name: "email",
+                      controller: email,
+                      hint: " Phone",
+                      validate: FormBuilderValidators.compose([
+                        FormBuilderValidators.required(),
+                      ]),
                     ),
                   ),
                 ],

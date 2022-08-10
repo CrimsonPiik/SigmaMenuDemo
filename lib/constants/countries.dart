@@ -1,3 +1,4 @@
+var country = ['Jordan'];
 var countries = [
   "Afghanistan",
   "Albania",

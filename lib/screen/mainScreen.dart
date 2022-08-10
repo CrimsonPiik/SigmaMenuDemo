@@ -1,6 +1,4 @@
-import 'package:coffee_app_ui/widgets/footer.dart';
 import 'package:coffee_app_ui/widgets/header.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -10,8 +8,8 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [
-          const Header(),
+        children: const [
+          Header(),
           ////////// Products Category //////////
           // Padding(
           //   padding:

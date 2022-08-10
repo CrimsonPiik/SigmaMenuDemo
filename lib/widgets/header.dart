@@ -1,3 +1,4 @@
+import 'package:coffee_app_ui/screen/formScreen.dart';
 import 'package:coffee_app_ui/screen/home_screen.dart';
 import 'package:coffee_app_ui/screen/mainScreen.dart';
 import 'package:coffee_app_ui/widgets/contentView.dart';
@@ -31,12 +32,12 @@ class _HeaderState extends State<Header> with SingleTickerProviderStateMixin {
 
   List<ContentView> contentViews = [
     ContentView(
-      tab: CustomTab(title: 'Home'),
-      content: MainCategories(),
+      tab: const CustomTab(title: 'Home'),
+      content: const MainCategories(),
     ),
     ContentView(
-      tab: CustomTab(title: 'About'),
-      content: Container(),
+      tab: const CustomTab(title: 'About'),
+      content: const FormScreen(),
     ),
   ];
 
@@ -65,7 +66,7 @@ class _HeaderState extends State<Header> with SingleTickerProviderStateMixin {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         /// Tab Bar
-        Container(
+        SizedBox(
           height: screenHeight! * 0.05,
           child: CustomTabBarr(
               controller: tabController!,
@@ -73,7 +74,7 @@ class _HeaderState extends State<Header> with SingleTickerProviderStateMixin {
         ),
 
         /// Tab Bar View
-        Container(
+        SizedBox(
           height: screenHeight!,
           child: TabControllerHandler(
             tabController: tabController!,

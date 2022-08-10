@@ -1,9 +1,6 @@
 import 'package:coffee_app_ui/widgets/footer.dart';
 import 'package:flip_card/flip_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class MainCategories extends StatelessWidget {
   const MainCategories({Key? key}) : super(key: key);

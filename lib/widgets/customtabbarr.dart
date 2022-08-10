@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTabBarr extends StatelessWidget {
-  CustomTabBarr({required this.controller, required this.tabs});
+  const CustomTabBarr({required this.controller, required this.tabs});
 
   final TabController controller;
   final List<Widget> tabs;
@@ -16,7 +16,7 @@ class CustomTabBarr extends StatelessWidget {
             : 0.4;
     return Padding(
       padding: EdgeInsets.only(right: screenWidth * 0.05),
-      child: Container(
+      child: SizedBox(
         width: screenWidth * tabBarScaling,
         child: Theme(
           data: ThemeData(
@@ -26,7 +26,7 @@ class CustomTabBarr extends StatelessWidget {
           child: TabBar(
             indicatorSize: TabBarIndicatorSize.tab,
             controller: controller,
-            indicatorColor: Color(0xff21a179),
+            indicatorColor: Colors.yellow,
             tabs: tabs,
           ),
         ),
